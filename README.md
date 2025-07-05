@@ -28,21 +28,21 @@ Below are sample cases demonstrating how the system handles various real-world s
 - Cart contains both shippable and non-shippable products  
 - Checkout proceeds successfully
 
-📷 *[Insert screenshot here]*
+ <img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/NormalScenario.png" alt="NormalScenario" />
 
 ---
 
 ### 2. Insufficient Balance
 - Customer tries to checkout with less balance than required
 
-📷 *[Insert screenshot here]*
+<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/UnsuffBalance.png" alt="UnsuffBalance" />
 
 ---
 
 ### 3. Empty Cart
 - Customer attempts to checkout with an empty cart
 
-📷 *[Insert screenshot here]*
+<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/EmptyCart.png" alt="EmptyCart" />
 
 ---
 
@@ -50,14 +50,14 @@ Below are sample cases demonstrating how the system handles various real-world s
 - One or more items in the cart are expired
 - System automatically detects and removes them from the cart
 
-📷 *[Insert screenshot here]*
+<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/Expired.png" alt="Expired" />
 
 ---
 
 ### 5. Out of Stock
 - A product in the cart has zero quantity available
 
-📷 *[Insert screenshot here]*
+<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/outOfStock.png" alt="outOfStock" />
 
 ---
 
@@ -65,7 +65,7 @@ Below are sample cases demonstrating how the system handles various real-world s
 - A product is flagged as shippable but has no weight
 - ShippingService handles it gracefully
 
-📷 *[Insert screenshot here]*
+<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/wZero.png" alt="wZero" />
 
 ---
 
@@ -73,7 +73,7 @@ Below are sample cases demonstrating how the system handles various real-world s
 - All items in the cart are non-shippable
 - ShippingService is skipped
 
-📷 *[Insert screenshot here]*
+<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/Noship.png" alt="Noship" />
 
 ---
 
