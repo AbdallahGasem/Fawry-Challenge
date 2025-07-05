@@ -6,11 +6,12 @@
 // Version: 1.0
 /* File run command: javac ShippingService.java; java ShippingService */
 // ----------------------------------------------------------------------------------------------------------------------------- //
-package base;
+package fawry.challenge.base;
 
-import helpers.Pair;
-import interfaces.Shippable;
 import java.util.ArrayList;
+
+import fawry.challenge.helpers.Pair;
+import fawry.challenge.interfaces.Shippable;
 
 public class ShippingService {
 
@@ -42,11 +43,19 @@ public class ShippingService {
             if (item.second instanceof Shippable) {
 
                 Shippable shipItem = (Shippable) item.second;
+                if (shipItem.getWeight() <= 0) {
+                    System.err.println("Product: " + item.second.getPName() + " is Not Shippable (weight <= 0)!");
+                    continue;
+                }
                 totKilos += item.first * shipItem.getWeight();
                 System.out.println(item.first + "X " + item.second.getPName() + "\t" + (item.first * shipItem.getWeight()));
 
             }
 
+        }
+
+        if (totKilos == 0) {
+            System.err.println("Nothing is Shippable!");
         }
         System.out.println("Total package weight " + totKilos + "kg");
         return totKilos * this.RatePerKilo;

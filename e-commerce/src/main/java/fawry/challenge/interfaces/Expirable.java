@@ -1,23 +1,18 @@
 //                                                      بسم الله الرحمن الرحيم                                                 //
-// Program: Pair.java
+// Program: Expirable.java
 // Description: 
 // Author: Abdallah Gasem
 // Date: 05-07-2025
 // Version: 1.0
-/* File run command: javac Pair.java; java Pair */
+/* File run command: javac Expirable.java; java Expirable */
 // ----------------------------------------------------------------------------------------------------------------------------- //
+package fawry.challenge.interfaces;
 
-package helpers;
+import java.util.Date;
 
-// implementing the pair DS as in CPP! it represents a pair of quantity & product
-public class Pair<K, V> {
+public interface Expirable {
 
-    public K first;
-    public V second;
+    public Boolean isExpired();
 
-    public Pair(K first, V second) {
-        this.first = first;
-        this.second = second;
-    }
-
+    public Date getExpiredDate();
 }

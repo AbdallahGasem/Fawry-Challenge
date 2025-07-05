@@ -1,3 +1,4 @@
+
 //                                                      بسم الله الرحمن الرحيم                                                 //
 // Program: Edible.java
 // Description: 
@@ -6,12 +7,13 @@
 // Version: 1.0
 /* File run command: javac Edible.java; java Edible */
 // ----------------------------------------------------------------------------------------------------------------------------- //
-package categories;
 
-import base.Product;
-import interfaces.Expirable;
-import interfaces.Shippable;
+package fawry.challenge.categories;
 import java.util.Date;
+
+import fawry.challenge.base.Product;
+import fawry.challenge.interfaces.Expirable;
+import fawry.challenge.interfaces.Shippable;
 
 public class Edible extends Product implements Shippable, Expirable {
 

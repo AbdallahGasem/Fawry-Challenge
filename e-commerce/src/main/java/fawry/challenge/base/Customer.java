@@ -7,7 +7,7 @@
 /* File run command: javac Customer.java; java Customer */
 // ----------------------------------------------------------------------------------------------------------------------------- //
 
-package base;
+package fawry.challenge.base;
 
 public class Customer {
 
@@ -40,14 +40,14 @@ public class Customer {
     }
 
     // paying at checkout
-    public boolean pay(Double amt){
+    public boolean pay(Double amt) {
         if (this.balance >= amt) {
             this.balance = this.balance - amt;
             System.out.println("Transaction successfully Completed");
             System.out.println("current Balance for " + this.name + " is: " + this.balance);
             return true;
         }
-        
+
         System.out.println("Transaction Failed! Not enough balance: " + this.balance);
         return false;
     }

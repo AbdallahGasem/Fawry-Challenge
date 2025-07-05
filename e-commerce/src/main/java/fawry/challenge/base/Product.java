@@ -7,7 +7,7 @@
 /* File run command: javac Product.java; java Product */
 // ----------------------------------------------------------------------------------------------------------------------------- //
 
-package base;
+package fawry.challenge.base;
 
 public abstract class Product {
 
@@ -50,4 +50,3 @@ public abstract class Product {
     }
 
 }
-

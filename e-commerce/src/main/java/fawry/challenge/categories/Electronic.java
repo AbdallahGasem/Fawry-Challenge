@@ -6,10 +6,10 @@
 // Version: 1.0
 /* File run command: javac Expirable.java; java Expirable */
 //-------------------------------------------------------------------------------------------------------------------------------//
-package categories;
+package fawry.challenge.categories;
 
-import base.Product;
-import interfaces.Shippable;
+import fawry.challenge.base.Product;
+import fawry.challenge.interfaces.Shippable;
 
 public class Electronic extends Product implements Shippable {
 
