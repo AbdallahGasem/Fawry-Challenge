@@ -4,7 +4,7 @@
 - [Introduction](#introduction)
 - [Examples of System in Action](#examples-of-system-in-action)
 - [Design and Thought Process](#design-process)
-- [Testing (Planned)](#testing-planned)
+- [Testing (Planned)](#testing)
 - [Conclusion & Internship Note](#conclusion--internship-note)
 
 ---
