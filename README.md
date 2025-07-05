@@ -89,7 +89,7 @@ Before coding, I reformulated the requirements in my own words to ensure I under
 - `Product` had all possible attributes (expiration, weight)
 - This design was **simple but rigid**, forcing all products to carry unnecessary attributes and implement irrelevant methods
 
-<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/DD1.png" alt="DD1" />
+<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/DD1.jpg" alt="DD1" />
 
 ---
 
@@ -115,7 +115,7 @@ To achieve **single responsibility and full decoupling**:
   - `Cart`
   - `ShippingService`
 
-<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/DD2.png" alt="DD2" />
+<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/DD2.jpg" alt="DD2" />
 ---
 
 ## Testing (Planned)
