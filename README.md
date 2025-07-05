@@ -1,11 +1,11 @@
 # E-Commerce System – Fawry Internship Challenge
 
 ## Table of Contents
-- [Introduction](#-introduction)
-- [Examples of System in Action](#-examples-of-system-in-action)
-- [Design and Thought Process](#-design-process)
-- [Testing (Planned)](#-testing-planned)
-- [Conclusion & Internship Note](#-conclusion--internship-note)
+- [Introduction](#introduction)
+- [Examples of System in Action](#examples-of-system-in-action)
+- [Design and Thought Process](#design-process)
+- [Testing (Planned)](#testing-planned)
+- [Conclusion & Internship Note](#conclusion--internship-note)
 
 ---
 
@@ -14,7 +14,7 @@
 Hello!  
 This repository contains my implementation of the **E-Commerce System** challenge as described in the provided PDF.
 
-The system is designed to simulate key e-commerce features such as managing products (some expirable or shippable), handling carts, customer balances, and integrating with a shipping service.
+The system is designed to simulate key e-commerce features such as managing products (some expirable or shippable), handling carts, customer balances, and integrating with services.
 
 ---
 
@@ -89,7 +89,7 @@ Before coding, I reformulated the requirements in my own words to ensure I under
 - `Product` had all possible attributes (expiration, weight)
 - This design was **simple but rigid**, forcing all products to carry unnecessary attributes and implement irrelevant methods
 
-*[Insert first design draft image]*
+<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/DD1.png" alt="DD1" />
 
 ---
 
@@ -99,8 +99,6 @@ I moved toward a **trait-based design** using interfaces — inspired by the "Si
 - Initially, each product would subclass `Product` and implement the traits it needs
 
 However, this approach required a separate class for every product — overkill if there are 100+ products!
-
----
 
 ### Final Design with Categories
 To simplify:
@@ -117,8 +115,7 @@ To achieve **single responsibility and full decoupling**:
   - `Cart`
   - `ShippingService`
 
- *[Insert second draft/final diagram]*
-
+<img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/DD2.png" alt="DD2" />
 ---
 
 ## Testing (Planned)
@@ -128,6 +125,7 @@ To achieve **single responsibility and full decoupling**:
   - Product creation
   - Cart logic
   - Balance validation
+  - ShippingService behavior  
   - CheckoutService behavior  
 - Test coverage will be committed soon
 
@@ -142,4 +140,4 @@ I’m genuinely excited about the opportunity to join your internship program, a
 
 Thank you for your time and consideration!
 
-— *Abdallah*
+— * Sincerly, Abdallah*
