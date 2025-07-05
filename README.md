@@ -140,4 +140,4 @@ I’m genuinely excited about the opportunity to join your internship program, a
 
 Thank you for your time and consideration!
 
-— * Sincerly, Abdallah*
+— *Sincerly, Abdallah*
