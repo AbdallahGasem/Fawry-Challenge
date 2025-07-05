@@ -10,11 +10,11 @@ package fawry.challenge;
 import fawry.challenge.base.Cart;
 import fawry.challenge.base.Customer;
 import fawry.challenge.base.Product;
-import fawry.challenge.base.ShippingService;
 import fawry.challenge.categories.Edible;
 import fawry.challenge.categories.Electronic;
 import fawry.challenge.categories.Other;
 import fawry.challenge.services.CheckoutService;
+import fawry.challenge.services.ShippingService;
 
 public class Main {
 

@@ -118,16 +118,20 @@ To achieve **single responsibility and full decoupling**:
 <img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/DD2.jpg" alt="DD2" />
 ---
 
-## Testing (Planned)
+## Testing
 
-- JUnit 5 setup is complete using Maven  
-- Test cases are currently being written to cover:
-  - Product creation
-  - Cart logic
-  - Balance validation
-  - ShippingService behavior  
-  - CheckoutService behavior  
-- Test coverage will be committed soon
+Using JUNIT i wrote some TestCases to ensure that the code is working as intended   
+  ### Cart logic Tests
+  <img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/CartTest.png" alt="" />
+
+  ### Balance validation and Customer behaviour
+  <img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/CustTest.png" alt="" />
+  
+  ### ShippingService behavior 
+  <img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/ShippTest.png" alt="" /> 
+  
+  ### CheckoutService behavior  
+  <img src="https://github.com/AbdallahGasem/Fawry-Challenge/blob/main/planning/checkOutTest.png" alt="" />
 
 ---
 

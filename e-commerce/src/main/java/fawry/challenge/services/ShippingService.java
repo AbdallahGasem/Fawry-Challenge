@@ -6,10 +6,11 @@
 // Version: 1.0
 /* File run command: javac ShippingService.java; java ShippingService */
 // ----------------------------------------------------------------------------------------------------------------------------- //
-package fawry.challenge.base;
+package fawry.challenge.services;
 
 import java.util.ArrayList;
 
+import fawry.challenge.base.Product;
 import fawry.challenge.helpers.Pair;
 import fawry.challenge.interfaces.Shippable;
 

@@ -13,18 +13,17 @@ import java.util.ArrayList;
 import fawry.challenge.base.Cart;
 import fawry.challenge.base.Customer;
 import fawry.challenge.base.Product;
-import fawry.challenge.base.ShippingService;
 import fawry.challenge.helpers.Pair;
 
 public class CheckoutService {
 
-    public static void checkout(ShippingService service, Customer customer, Cart cart) {
+    public static boolean checkout(ShippingService service, Customer customer, Cart cart) {
 
         ArrayList<Pair<Double, Product>> items = cart.getitems(); 
         // if the cart is empty stop the operation
         if (items.isEmpty()) {
             System.err.println("ERROR: the Cart is Empty Cant checkout an Empty Cart!");
-            return;
+            return false;
         }
 
         System.out.println("\n** Shipment Notice **\n");
@@ -52,6 +51,8 @@ public class CheckoutService {
         } else {
             System.err.println("Mr\\Ms " + customer.getName() + " Please recharge or use different Payment method");
         }
+
+        return true;
 
     }
 }

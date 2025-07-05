@@ -1,0 +1,5 @@
+# Created at 2025-07-05T23:35:30.657
+Boot Manifest-JAR contains absolute paths in classpath 'E:\MS-Prepare\Fawry\Fawry-Challenge\e-commerce\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
