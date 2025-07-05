@@ -9,6 +9,7 @@
 package base;
 
 import helpers.Pair;
+import interfaces.Expirable;
 import java.util.ArrayList;
 
 public class Cart {
@@ -28,12 +29,22 @@ public class Cart {
         return this.items;
     }
 
-    // add to cart
+    // add to cart - vvvimp. see of the item isexpired!
     public boolean add(Double qty, Product product) {
-        System.out.println("add(" + qty + ", " + product.getPName() + ")\n");    // to see results in the console
+        System.out.println("add(" + qty + ", " + product.getPName() + ")");    // to see results in the console
         if (product.getQty() >= qty) {
+
+            // is the item expired or not
+            if (product instanceof Expirable) {
+                Expirable ExpItem = (Expirable) product;
+                if (ExpItem.isExpired()) {
+                    System.out.println("Expired Item: " + product.getPName() + " removing from cart...");
+                    return false;
+                }
+            }
             items.add(new Pair<>(qty, product));
             return true;
+
         }
         System.out.println("Unsufficient Quantity of product: " + product.getPName() + ",  " + product.getQty() + " Quantity availale!");
         return false;
@@ -41,7 +52,7 @@ public class Cart {
 
     // remove from cart
     public boolean remove(String pName) {
-        System.out.println("remove(" + pName + ")\n");    // to see results in the console
+        System.out.println("remove(" + pName + ")");    // to see results in the console
         boolean removed = items.removeIf(pair -> pair.second.getPName().equals(pName));
         if (!removed) {
             System.out.println("Product with name '" + pName + "' not found in cart!");
@@ -54,32 +65,32 @@ public class Cart {
     // calc quantities and price per each
     // check cust balance!
     // print notice review the PDF!
-    public void checkout() {
+    public void checkout(ShippingService service) {
 
-        System.out.println("** Shipment Notice **\n");
+        System.out.println("\n** Shipment Notice **\n");
+
         // pass the items to the shipService to see which is going to be shipped and calc the weights!
-        // Double shipping = shipp() // returns the ship cost and total weights!
-        System.out.println("** Checkout Receipt **\n");
+        Double shipping = service.ship(this.items);
+        System.out.println("\n** Checkout Receipt **\n");
 
         // calc the cost of the order
         Double subTotal = 0.0;
         for (Pair<Double, Product> item : items) {
 
             subTotal = subTotal + (item.first * item.second.getPrice());
-            System.out.println(item.first + "X " + item.second.getPName() + "\t" + (item.first * item.second.getPrice()) + "\n");
+            System.out.println(item.first + "X " + item.second.getPName() + "\t" + (item.first * item.second.getPrice()));
 
         }
         System.out.println("-----------------------------------------------------");
         System.out.println("SubTotal: " + subTotal);
-        // System.out.println("Shipping: " + );
-        // System.out.println("Amount: " + (shipping + subTotal ));
-        // boolean paymentState = customer.pay((shipping + subTotal ));
-        // if (paymentState) {
-        //     items.clear();  // can keep history for tracking the orders! but skip for now
-        // }
-        // else{
-        //     System.out.println("Mr\Ms "+ customer.getName() + " Please recharge or use different Payment method");
-        // }
+        System.out.println("Shipping: " + shipping);
+        System.out.println("Amount: " + (shipping + subTotal));
+        boolean paymentState = customer.pay((shipping + subTotal));
+        if (paymentState) {
+            items.clear();  // can keep history for tracking the orders! but skip for now
+        } else {
+            System.out.println("Mr\\Ms " + customer.getName() + " Please recharge or use different Payment method");
+        }
 
     }
 
